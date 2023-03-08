@@ -9,7 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/pais-service")
 public class PaisRestController {
 
-    @GetMapping("/hola")
+    /**
+     * Endpoint para recibir un saludo
+     * @param nombre Es el nombre que envian desde la url
+     * @return Un saludo
+     */
+    @GetMapping("/hola/{nombre}")
     public String holaMundo(@PathVariable("nombre") String nombre){
         return "Hola mundo!";
     }
