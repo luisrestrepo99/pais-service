@@ -30,12 +30,7 @@ public class PaisRestController {
 
     @GetMapping("/paises")
     public List<Pais> listar(){
-        List <Pais> paises = new ArrayList<>();
-        Pais pais1 = new Pais(1L, "colombia");
-        Pais pais2 = new Pais(2L, "ecuador");
-        paises.add(pais1);
-        paises.add(pais2);
-        return paises;
+        return paisService.findAll();
     }
 
 
