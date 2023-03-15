@@ -41,8 +41,13 @@ public class PaisServiceImpl implements IPaisService{
         return (List<Pais>) paisDao.findAll();
     }
 
+    /**
+     * Este metodo busca un pais
+     * @param id Llave primaria del pais que se quiere buscar
+     * @return el pais identificado por el campo id
+     */
     @Override
     public Pais findById(Long id) {
-        return null;
+        return paisDao.findById(id).get();
     }
 }

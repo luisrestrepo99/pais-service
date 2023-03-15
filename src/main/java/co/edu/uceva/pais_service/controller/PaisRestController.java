@@ -28,10 +28,18 @@ public class PaisRestController {
         return "Hola "+ nombre;
     }
 
+    /**
+     * Metodo que lista los paises
+     * @return Lista de paises
+     */
     @GetMapping("/paises")
     public List<Pais> listar(){
         return paisService.findAll();
     }
 
+    @GetMapping("/paises/{id}")
+    public Pais buscarPais(@PathVariable("id") Long id){
+        return paisService.findById(id);
+    }
 
 }
